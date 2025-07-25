@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <link rel="icon" type="image/x-icon" href="assets/Favicon.png">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: #f0f0f0;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    .board {
+      display: grid;
+      grid-template-columns: repeat(3, 80px);
+      grid-template-rows: repeat(3, 80px);
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .cell {
+      width: 80px;
+      height: 80px;
+      background: #fff;
+      border: 2px solid #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .cell:hover {
+      background: #e0e0e0;
+    }
+    #status {
+      margin-bottom: 16px;
+      font-size: 1.2rem;
+      min-height: 1.5em;
+    }
+    #resetBtn {
+      padding: 8px 20px;
+      font-size: 1rem;
+      border: none;
+      background: #333;
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    #resetBtn:hover {
+      background: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="title-box">
+    <h1>TicTacToe</h1>
+  </div>
+  <div id="status">Player X's turn</div>
+  <div class="board" id="board">
+    <div class="cell" data-index="0"></div>
+    <div class="cell" data-index="1"></div>
+    <div class="cell" data-index="2"></div>
+    <div class="cell" data-index="3"></div>
+    <div class="cell" data-index="4"></div>
+    <div class="cell" data-index="5"></div>
+    <div class="cell" data-index="6"></div>
+    <div class="cell" data-index="7"></div>
+    <div class="cell" data-index="8"></div>
+  </div>
+  <div class="score-row">
+    <span id="score-x" class="score">X: 0</span>
+    <button id="resetBtn">Reset Game</button>
+    <span id="score-o" class="score">O: 0</span>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
